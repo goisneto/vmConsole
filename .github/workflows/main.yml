@@ -166,7 +166,7 @@ jobs:
       - name: Create APK
         run: |
           # Detect missing ISO file.
-          [ ! -f ./app/src/main/assets/alpine-x86_64.iso ] && exit 1
+          [ ! -f ./app/src/main/assets/alpine-x86_64.iso ] && wget -o ./app/src/main/assets/alpine-x86_64.iso 'https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-virt-3.18.2-x86_64.iso' || exit 1
 
           # Detect missing JNI libraries.
           for abi in arm64-v8a armeabi-v7a x86 x86_64; do
