@@ -60,7 +60,7 @@ public class Config {
     /**
      * Max RAM allocation in MiB which is considered to be safe.
      */
-    public static final int QEMU_MAX_SAFE_RAM = 2047;
+    public static final int QEMU_MAX_SAFE_RAM = 7629;
 
     /**
      * Minimal size of TCG buffer in MiB that would not cause too many
